@@ -6,8 +6,8 @@ module.exports = {
   // 由于我在src里面写工具方法，需要有一个开发环境，那么dev和prod的入口不同，所以在各自的conf文件里面写
   output: {
     path: resolve('lib'), // 输出文件夹路径
-    filename: 'meoow.js', // 输出文件名
-    library: 'meoow', // 输出的工具库名，可暴露为全局变量
+    filename: 'vue-meow.js', // 输出文件名
+    library: 'vueMeow', // 输出的工具库名，可暴露为全局变量
     libraryTarget: 'umd', // 为了让该库能够在其他环境，如node, 浏览器等均可被引用，用umd，全面兼容
   },
   module: {

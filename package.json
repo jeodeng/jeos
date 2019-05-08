@@ -1,8 +1,8 @@
 {
-  "name": "meoow",
+  "name": "vue-meow",
   "version": "1.0.0",
-  "description": "a box for myself",
-  "main": "./lib",
+  "description": "beta",
+  "main": "./lib/vue-meow.js",
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --progress --config build/webpack.dev.conf.js",
@@ -10,19 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeodeng/meoow.git"
+    "url": "git+https://github.com/jeodeng/vue-meow.git"
   },
   "keywords": [
-    "meoow"
+    "vue-meow"
   ],
   "author": "jeodeng",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jeodeng/meoow/issues"
+    "url": "https://github.com/jeodeng/vue-meow/issues"
   },
-  "homepage": "https://github.com/jeodeng/meoow#readme",
+  "homepage": "https://github.com/jeodeng/vue-meow#readme",
   "devDependencies": {
     "@babel/core": "^7.4.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.4",
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/runtime": "^7.4.4",
@@ -39,5 +40,8 @@
     "webpack-dev-server": "^3.3.1",
     "webpack-merge": "^4.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vue-meow": "^1.0.0",
+    "vue": "^2.6.10"
+  }
 }
