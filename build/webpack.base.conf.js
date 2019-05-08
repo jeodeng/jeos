@@ -3,7 +3,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 const { resolve } = require('./utils');
 
 module.exports = {
-  // 由于我在src里面写工具方法，需要有一个开发环境，那么dev和prod的入口不同，所以在各自的conf文件里面写
+  // 由于我在src里面写工具方法，需要有一个开发环境调试这些方法，那么dev和prod的入口不同，所以在各自的conf文件里面写
   output: {
     path: resolve('lib'), // 输出文件夹路径
     filename: 'vue-meow.js', // 输出文件名
@@ -45,13 +45,13 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.vue'],
+    extensions: ['.js', '.vue'], // import的时候路径自动添加上文件后缀
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
+      'vue$': 'vue/dist/vue.esm.js', // 这个如果不写，在import vue的时候其实导入的是vue.common.js（在node_modules里面），但我不想导入这个，所以改写一下
+      '@': resolve('src'), // 设置别名是为了项目中能直接import '@/utils/xxx.js'这样，方便。
     },
   },
   plugins: [
-    new VueLoaderPlugin(),
+    new VueLoaderPlugin(), // vue-loader插件，编译需要
   ],
 };

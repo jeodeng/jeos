@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import App from './App';
-import vueMeow from '../lib/vue-meow.js';
+import vueMeow from 'vue-meow';
 
 console.log(vueMeow);
 

@@ -41,7 +41,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "vue-meow": "^1.0.0",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-meow": "^1.0.0"
   }
 }
