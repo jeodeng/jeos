@@ -10,6 +10,9 @@ const baseConfig = require('./webpack.base.config')
 const { resolve } = require('./utils')
 
 module.exports = merge(baseConfig, {
+  entry: {
+    app: [resolve('example/main.js')] //入口
+  },
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {

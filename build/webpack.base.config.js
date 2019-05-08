@@ -8,16 +8,6 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 
 const { resolve } = require('./utils')
 module.exports = {
-  entry: {
-    app: [resolve('example/main.js')] //入口
-  },
-  output: {
-    libraryTarget: "umd",
-    path: resolve('dist'),
-    // publicPath: getPublicPath(),
-    filename: '[name].js'
-    // chunkFilename: '[name].chunk.js',
-  },
   module: {
     rules: [
       {
