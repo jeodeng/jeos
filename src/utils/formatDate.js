@@ -1,6 +1,6 @@
 import isEmpty from './isEmpty';
 
-export default function formatDate(date = null, express = 'YYYY-MM-DD HH-II-SS') {
+export default function formatDate(date = null, express = 'YYYY-MM-DD HH:II:SS') {
   if (typeof express !== 'string' || isEmpty(express)) throw new TypeError('formateDate 函数，第二个参数必须为YYYY-MM-DD HH-II-SS格式字符串');
   const setter = typeof date === 'object' && date !== null ? `${date.year}/${date.month}/${date.day}` : date;
   const t = typeof setter === 'number' || typeof setter === 'string' ? new Date(setter) : new Date();
