@@ -1,6 +1,6 @@
 import utils from './utils';
 
-export const osUtils = utils;
+export const owUtils = utils;
 
 export default {
   utils,

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    Welcome
+    Welcome to Use
   </div>
 </template>
 
@@ -8,6 +8,16 @@
 
 export default {
   name: 'App',
+  data() {
+    return {
+      msg: '',
+    };
+  },
+  methods: {
+    test() {
+      this.msg = 'test';
+    },
+  },
 };
 </script>
 
@@ -17,7 +27,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: green;
   margin-top: 60px;
 }
 </style>

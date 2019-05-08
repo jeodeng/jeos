@@ -1,5 +1,8 @@
 {
   "presets": ["@babel/preset-env"],
-  "plugins": ["@babel/transform-runtime"],
-  "comments": false
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-modules-commonjs"
+  ],
 }
