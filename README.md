@@ -7,7 +7,7 @@ todolist
 --------
 
 -	[ 组件库 ] 简单的表单组件以及一些业务组件（尚未开发）
--	[ axios封装 ] httpAdapter 封装http，使其更方便应用于业务中（开发中）
+-	[ axios封装 ] httpAdapter 封装http，使其更方便应用于业务中（开发中, http分支）
 -	[ 工具库 ] utils 自用的一些工具函数（持续更新）
 
 ### how to use ?
