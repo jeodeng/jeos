@@ -1,10 +1,16 @@
 <template>
   <div id="app">
-    Welcome to Use
+    <div class="">
+      <button type="button" name="button" @click="init">按钮1</button>
+      <button type="button" name="button" @click="init">按钮2</button>
+      <button type="button" name="button" @click="init">按钮3</button>
+    </div>
   </div>
 </template>
 
 <script>
+import http from './adapter';
+import { owUtils } from 'vue-meow';
 
 export default {
   name: 'App',
@@ -13,9 +19,17 @@ export default {
       msg: '',
     };
   },
+  computed: {
+    data() {
+      return localStorage.getItem('people');
+    },
+  },
   methods: {
-    test() {
-      this.msg = 'test';
+    init() {
+      owUtils.storage.set('people', { name: '张三', sex: '男' });
+    },
+    update() {
+      owUtils.storage.set('people', { name: '李四', sex: '女' });
     },
   },
 };
